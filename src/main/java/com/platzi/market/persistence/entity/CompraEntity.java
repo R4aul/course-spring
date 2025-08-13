@@ -15,7 +15,7 @@ public class CompraEntity {
     @Column(name = "id_compra")
     private Long idCompra;
 
-    @Column(name = "id_compra")
+    @Column(name = "id_cliente")
     private String idCliente;
 
     private LocalDateTime fecha;
@@ -31,7 +31,7 @@ public class CompraEntity {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private ClienteEntity cliente;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra")
     private List<ComprasProductoEntity> productos;
 
     public Long getIdCompra() {

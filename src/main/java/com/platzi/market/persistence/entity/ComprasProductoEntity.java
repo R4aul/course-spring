@@ -54,4 +54,20 @@ public class ComprasProductoEntity {
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
+
+    public CompraEntity getCompra() {
+        return compra;
+    }
+
+    public void setCompra(CompraEntity compra) {
+        this.compra = compra;
+    }
+
+    public ProductoEntity getProducto() {
+        return producto;
+    }
+
+    public void setProducto(ProductoEntity producto) {
+        this.producto = producto;
+    }
 }

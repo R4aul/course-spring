@@ -31,7 +31,7 @@ public class CompraEntity {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private ClienteEntity cliente;
 
-    @OneToMany(mappedBy = "compra")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<ComprasProductoEntity> productos;
 
     public Long getIdCompra() {
@@ -80,5 +80,21 @@ public class CompraEntity {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public ClienteEntity getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ComprasProductoEntity> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProductoEntity> productos) {
+        this.productos = productos;
     }
 }

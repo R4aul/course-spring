@@ -13,7 +13,7 @@ public class CompraEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_compra")
-    private Long idCompra;
+    private Integer idCompra;
 
     @Column(name = "id_cliente")
     private String idCliente;
@@ -34,11 +34,11 @@ public class CompraEntity {
     @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<ComprasProductoEntity> productos;
 
-    public Long getIdCompra() {
+    public Integer getIdCompra() {
         return idCompra;
     }
 
-    public void setIdCompra(Long idCompra) {
+    public void setIdCompra(Integer idCompra) {
         this.idCompra = idCompra;
     }
 
